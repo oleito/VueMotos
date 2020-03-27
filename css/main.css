@@ -1,0 +1,29 @@
+.img-responsive-logo {
+    margin: 0 auto;
+}
+
+.nav-socials {
+    font-size: 1.8em;
+}
+.main {
+    flex: 1 0 auto;
+}
+/* MODELOS */
+.modelos {
+    background-color: #D8D8D8;
+}
+/* FOOTER */
+.bg-honda-footer {
+    background-color: #E6E6E6;
+    flex-shrink: none;
+}
+.hr-honda {
+    border-color: #E40421;
+}
+.footer-socials a i{
+    font-size: 2.2em;
+}
+.contactanos-honda {
+    background-color: #E6E6E6;
+    color: #ED5565;
+}

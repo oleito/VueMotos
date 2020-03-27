@@ -1,6 +1,14 @@
 new Vue({
-    el: '#app',
-    data: {
-      message: 'Hello Honda Motors'
-    }
-  })
+  el: "#app",
+  data: {
+    modelos: [
+      { modelo: "modelo" },
+      { modelo: "modelo" },
+      { modelo: "modelo" },
+      { modelo: "modelo" },
+      { modelo: "modelo" },
+      { modelo: "modelo" },
+      { modelo: "modelo" }
+    ]
+  }
+});
