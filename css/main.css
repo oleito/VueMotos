@@ -1,29 +1,49 @@
 .img-responsive-logo {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .nav-socials {
-    font-size: 1.8em;
+  font-size: 1.8em;
 }
 .main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 /* MODELOS */
 .modelos {
-    background-color: #D8D8D8;
+  background-color: #d8d8d8;
+}
+/* Landing */
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}
+.landing-row {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.landing-row h3 {
+  color: #ed1b2f;
+  font-size: 2em;
+}
+.landing-row p {
+  color: #fff;
+  font-size: 1.4em;
+  font-family: "Times New Roman", Times, serif;
+}
+.hr-landing {
+  border-color: seashell;
 }
 /* FOOTER */
 .bg-honda-footer {
-    background-color: #E6E6E6;
-    flex-shrink: none;
+  background-color: #e6e6e6;
+  flex-shrink: none;
 }
 .hr-honda {
-    border-color: #E40421;
+  border-color: #e40421;
 }
-.footer-socials a i{
-    font-size: 2.2em;
+.footer-socials a i {
+  font-size: 2.2em;
 }
 .contactanos-honda {
-    background-color: #E6E6E6;
-    color: #ED5565;
+  background-color: #e6e6e6;
+  color: #ed5565;
 }

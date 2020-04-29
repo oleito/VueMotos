@@ -2,6 +2,31 @@
 <html lang="es-AR">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92952471-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-92952471-7');
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="revisit-after" content="1 day" />
+    <meta name="robots" content="index, follow" />
+
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Last-Modified" content="0" />
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <meta name="copyright" content="Paris Motor SA" />
+    <meta name="author" content="Paris Motor SA" />
+
+    <meta name="description" content="Veni, busca tu moto Honda. Tenemos todos los modelos." />
+    <meta name="keywords" content="Honda, Concesionario, Postventa" />
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,6 +41,16 @@
 </head>
 
 <body data-spy="scroll" data-target="#sticky-menu" data-offset="0">
+    <!-- Código de instalación Cliengo para www.parismotos.com.ar -->
+    <script type="text/javascript">(function () {
+            var ldk = document.createElement('script');
+            ldk.type = 'text/javascript';
+            ldk.async = true;
+            ldk.src = 'https://s.cliengo.com/weboptimizer/5e7bb9d9e4b0cad9a131f5e7/5e7bc725e4b0cad9a131fa95.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ldk, s);
+        })();
+    </script>
 
     <!-- NAV -->
     <nav class="navbar navbar-light bg-light py-0 sticky-top shadow">
@@ -43,10 +78,10 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Modelos</a>
+                    <a class="nav-link" href="#modelos">Modelos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Postventa</a>
@@ -104,11 +139,62 @@
 
             </div>
         </section>
-
+        <!-- landing -->
         <section>
-            <div class="container-fluid">
+            <div class="container-fluid parallax-window" data-parallax="scroll" data-speed="0.3" data-image-src="./assets/parallax/Ortasa_Bilbao-5.jpg">
+                <div class="container py-4">
+
+                    <div class="row justify-content-end my-5 py-4 rounded rounded-80 landing-row">
+                        <div class="col-md-7">
+                            <h3 class="text-center my-3">CONTACTANOS</h3>
+                            <hr class="hr-landing mx-auto w-50 mt-4">
+                            <blockquote class="blockquote">
+                                <p class="mb-0"><em> “Dejé que nadie moleste mi concentración, Incluso el hambre no me podía molestar.”</em></p>
+                                <footer class="blockquote-footer d-flex justify-content-end">Soichiro Honda</footer>
+                            </blockquote>
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="p-3 rounded rounded-80 align-bottom bg-light">
+                                <form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail1.php">
+                                    <div class="form-group">
+                                        <input type="text" name="nombre" class="form-control form-control-sm" required="required" placeholder="Nombre" autocomplete="off" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="apellido" class="form-control form-control-sm" required="required" placeholder="Apellido" autocomplete="off" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="tel" name="tel" class="form-control form-control-sm" required="required" placeholder="Telefono" autocomplete="off" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control form-control-sm" required="required" placeholder="Email" autocomplete="off" />
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea maxlength="500" name="message" id="message" required="required" class="form-control" rows="4"
+                                            placeholder="Escriba su consulta aca."></textarea>
+                                    </div>
+                                    <div class="form-group m-0 p-0">
+                                        <button type="submit" class="btn btn-dark btn-block btn-sm">Enviar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="modelos">
+
+            <div class="container-fluid parallax-window">
                 <div class="container py-5">
+                    <div class="row">
+                        <div class="alert alert-danger md-block" role="alert">
+                            Todavia no estamos listos! - Algunas funciones de ésta pagina aún no estan listas. Estamos trabajando para solucionarlo cuanto antes.
+                        </div>
+                    </div>
                     <div class="row justify-content-around" id="app">
+
                         <div class="col-md-3 py-3" v-for="modelo in modelos">
                             <div class="modelo shadow rounded bg-light">
                                 <picture>
@@ -134,7 +220,7 @@
         </section>
     </main>
 
-    <footer class="bg-honda-footer">
+    <footer class="bg-honda-footer" id="contacto">
         <div class="container">
             <div class="row">
                 <div class="contactanos-honda col-md-4 text-center px-0">
@@ -210,7 +296,7 @@
                             <textarea class="form-control" id="message" name="message" rows="3" placeholder="Escriba su consulta aca."></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-citro btm-xs text-white">Enviar</button>
+                            <button type="submit" class="btn btn-sm btn-block btn-secondary text-white">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -231,6 +317,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/parallax.min.js"></script>
 
 </body>
 

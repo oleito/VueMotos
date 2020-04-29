@@ -1,14 +1,13 @@
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
-  var concesionario = { lat: -33.2960176, lng: -66.2979859 };
-  var concesionarioVM = { lat: -33.6768736, lng: -65.4625694 };
-  var center = { lat: -33.4725504, lng: -65.9025249 };
+  var concesionario = { lat: -33.2954723, lng: -66.3380631 };
+  var center = { lat: -33.2954723, lng: -66.3380631 };
   //var icono = "./img/icon_maps.png";
   // var icono = "https://imgplaceholder.com/200x320";
   // The map, centered at concesionario
   var map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 9,
+    zoom: 14,
     center: center
   });
   var contentString =
@@ -36,12 +35,6 @@ function initMap() {
     title: "Paris Postventa"
   });
 
-  var marker2 = new google.maps.Marker({
-    position: concesionarioVM,
-    map: map,
-    //icon: './gmap/flag_mpeugeot.png',
-    title: "Paris Postventa"
-  });
   marker.addListener("click", function() {
     infowindow.open(map, marker);
   });

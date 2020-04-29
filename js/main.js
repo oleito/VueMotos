@@ -5,9 +5,6 @@ new Vue({
       { modelo: "modelo" },
       { modelo: "modelo" },
       { modelo: "modelo" },
-      { modelo: "modelo" },
-      { modelo: "modelo" },
-      { modelo: "modelo" },
       { modelo: "modelo" }
     ]
   }
