@@ -26,14 +26,11 @@ $cabeceras = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 'From: mauro.soratto@parisautos.com.ar' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
-$para1 = 'sistemas@parisautos.com.ar';
-$para1 = 'fernando.galicia@parismotos.com.ar';
-$para1 = 'gaston.rossi@parisautos.com.ar';
+$destinatarios = ['sistemas@parisautos.com.ar', 'fernando.galicia@parismotos.com.ar', 'gaston.rossi@parisautos.com.ar'];
 
-
-mail($para1, $titulo, $mensaje, $cabeceras);
-mail($para2, $titulo, $mensaje, $cabeceras);
-mail($para3, $titulo, $mensaje, $cabeceras);
+foreach($destinatarios as $para) {
+ mail($para, $titulo, $mensaje, $cabeceras);
+}
 
 ?>
 
