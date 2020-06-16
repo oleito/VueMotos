@@ -23,10 +23,10 @@ $mensaje .= '</body>';
 $mensaje .= '</html>';
 
 $cabeceras = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-'From: mauro.soratto@parisautos.com.ar' . "\r\n" .
+'From: pagina.honda@parismotos.com.ar' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
-$destinatarios = ['sistemas@parisautos.com.ar', 'fernando.galicia@parismotos.com.ar', 'gaston.rossi@parisautos.com.ar'];
+$destinatarios = ['sistemas@parisautos.com.ar', 'fernando.galicia@parismotos.com.ar', 'gaston.rossi@parismotos.com.ar'];
 
 foreach($destinatarios as $para) {
  mail($para, $titulo, $mensaje, $cabeceras);
