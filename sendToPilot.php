@@ -7,7 +7,7 @@ $appKey = "E2458BC6-16AF-44CA-B922-0C5295D34D3F"; //aqui la key de la instancia 
 $codigoDeOrigenDelDato = "ED2FAOQTA5F6UNV0C"; // poner codigo de origen de pilot en el administrador EJ: 345534
 $landing_link = "https://parismotos.com.ar/"; //link de la landing EJ: www.landingejemplo.com.ar/landing.html
 $serviceURL = "https://www.pilotsolution.com.ar/api/webhooks/welcome.php";
-$debug = 1; //1 para indicar que es prueba y que no inserte el dato en el sistema.
+$debug = 0; //1 para indicar que es prueba y que no inserte el dato en el sistema.
 // ***********************************************************************************************//
 
 $PARAMETRO_REQUERIDO = true;
@@ -47,19 +47,25 @@ try {
         echo "No se pudo cargar el dato por : " . $response["data"];
 
     } else {
+        $res = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+        $res .= '<html xmlns="http://www.w3.org/1999/xhtml">';
+        $res .= '<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
+        $res .= '   <script>alert("Su consulta ha sido enviada. Nos pondremos en contacto con usted lo mas pronto posible.");</script>';
+        $res .= '       <meta HTTP-EQUIV="REFRESH" content="0; url=index.html">';
+        $res .= '</head>';
 
-        echo "El dato se cargo correctamente";
+        echo $res;
+
+        // echo "El dato se cargo correctamente";
     }
 
-    echo "<br> DEBUG (eliminar en produccion) :<br>";
-    echo "<pre>";
-    echo $output;
-    echo "</pre>";
+    // echo "<br> DEBUG (eliminar en produccion) :<br>";
+    // echo "<pre>";
+    // echo $output;
+    // echo "</pre>";
 
 } catch (Exception $e) {
-
     echo $e->getMessage();
-
 }
 
 die();
