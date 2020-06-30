@@ -44,7 +44,13 @@ try {
     //IMPLEMENTAR METODO DE CAPTURA DE ERROR
     if ($response["success"] == false) {
 
-        echo "No se pudo cargar el dato por : " . $response["data"];
+        $res = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
+        $res .= '<html xmlns="http://www.w3.org/1999/xhtml">';
+        $res .= '<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">';
+        $res .= '   <script>alert("Algo malo paso en nuetros servidores. Por favor intenta mas tarde o comunicate al 2665133500. Gracias!");</script>';
+        $res .= '       <meta HTTP-EQUIV="REFRESH" content="0; url=index.html">';
+        $res .= '</head>';
+        $res = '';
 
     } else {
         $res = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">';
@@ -54,15 +60,9 @@ try {
         $res .= '       <meta HTTP-EQUIV="REFRESH" content="0; url=index.html">';
         $res .= '</head>';
 
-        echo $res;
-
-        // echo "El dato se cargo correctamente";
     }
-
-    // echo "<br> DEBUG (eliminar en produccion) :<br>";
-    // echo "<pre>";
-    // echo $output;
-    // echo "</pre>";
+    
+    echo $res;
 
 } catch (Exception $e) {
     echo $e->getMessage();

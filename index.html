@@ -51,7 +51,7 @@
             var s = document.getElementsByTagName('script')[0];
             s.parentNode.insertBefore(ldk, s);
         })();
-    </script> 
+    </script>
 
     <!-- NAV -->
     <nav class="navbar navbar-light bg-light py-0 sticky-top shadow">
@@ -161,28 +161,34 @@
                                 <form id="contact-form" class="contact" name="contact-form" method="post"
                                     action="./sendToPilot.php">
 
-                                    <input id="pilot_contact_type_id" name="pilot_contact_type_id" type="hidden" value="1">
-                                    <input id="pilot_business_type_id" name="pilot_business_type_id" type="hidden" value="1">
+                                    <input id="pilot_contact_type_id" name="pilot_contact_type_id" type="hidden"
+                                        value="1">
+                                    <input id="pilot_business_type_id" name="pilot_business_type_id" type="hidden"
+                                        value="1">
 
                                     <div class="form-group">
-                                        <input type="text" name="pilot_firstname" id="pilot_firstname" class="form-control form-control-sm"
-                                            required="required" placeholder="Nombre" autocomplete="off" />
+                                        <input type="text" name="pilot_firstname" id="pilot_firstname"
+                                            class="form-control form-control-sm" required="required"
+                                            placeholder="Nombre" autocomplete="off" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" name="pilot_lastname" id="pilot_lastname" class="form-control form-control-sm"
-                                             placeholder="Apellido" autocomplete="off" />
+                                        <input type="text" name="pilot_lastname" id="pilot_lastname"
+                                            class="form-control form-control-sm" placeholder="Apellido"
+                                            autocomplete="off" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="tel" name="pilot_phone" id="pilot_phone" class="form-control form-control-sm"
-                                            required="required" placeholder="Telefono" autocomplete="off" />
+                                        <input type="tel" name="pilot_phone" id="pilot_phone"
+                                            class="form-control form-control-sm" required="required"
+                                            placeholder="Telefono" autocomplete="off" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="email" name="pilot_email" id="pilot_email" class="form-control form-control-sm"
-                                            placeholder="Email" autocomplete="off" />
+                                        <input type="email" name="pilot_email" id="pilot_email"
+                                            class="form-control form-control-sm" placeholder="Email"
+                                            autocomplete="off" />
                                     </div>
                                     <div class="form-group">
-                                        <textarea maxlength="500" name="pilot_notes" id="pilot_notes" required="required"
-                                            class="form-control" rows="4"
+                                        <textarea maxlength="500" name="pilot_notes" id="pilot_notes"
+                                            required="required" class="form-control" rows="4"
                                             placeholder="Contanos que modelo te interesa. Nosotros te llamamos."></textarea>
                                     </div>
                                     <div class="form-group m-0 p-0">
@@ -293,17 +299,19 @@
                 <div class="col-md-4">
                     <h6><b> CONTACTO</b></h6>
                     <hr class="hr-honda accent-2 mb-4 mt-0 d-inline-block mx-auto w-50" />
-                    <form method="post" action="send-mail2.php">
+                    <form method="post" action="./sendToPilot.php">
+                        <input id="pilot_contact_type_id" name="pilot_contact_type_id" type="hidden" value="1">
+                        <input id="pilot_business_type_id" name="pilot_business_type_id" type="hidden" value="1">
                         <div class="form-group">
-                            <input type="text" name="nombre" class="form-control" id="nombre"
+                            <input type="text" name="pilot_firstname" class="form-control" id="pilot_firstname"
                                 aria-describedby="emailHelp" placeholder="Nombre" autocomplete="off" />
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="tel" name="tel" placeholder="Celular"
-                                autocomplete="off" />
+                            <input type="text" class="form-control" id="pilot_cellphone" name="pilot_cellphone"
+                                placeholder="Celular" autocomplete="off" />
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" name="message" rows="3"
+                            <textarea class="form-control" id="pilot_notes" name="pilot_notes" rows="3"
                                 placeholder="Escriba su consulta aca."></textarea>
                         </div>
                         <div class="text-center">
